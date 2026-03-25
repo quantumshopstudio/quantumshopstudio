@@ -12,24 +12,23 @@ export default function SamplesPage() {
       >
         <div className="grid gap-4 md:grid-cols-3">
           {site.samples.map((p) => (
-            <div key={p.title} className="rounded-2xl border border-white/10 bg-panel/30 p-6">
-              <div className="font-semibold">{p.title}</div>
+            <article key={p.title} className="rounded-2xl border border-white/10 bg-panel/30 p-6">
+              <h3 className="font-semibold">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-300">{p.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <ul className="mt-4 flex flex-wrap gap-2" aria-label={`Tags for ${p.title}`}>
                 {p.tags.map((t) => (
-                  <span
+                  <li
                     key={t}
-                    className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-200"
+                    className="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-200 list-none"
                   >
                     {t}
-                  </span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </article>
           ))}
         </div>
       </Section>
     </div>
   );
 }
-

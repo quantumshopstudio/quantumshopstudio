@@ -28,3 +28,28 @@ body {
 ::selection {
   background: rgba(34, 211, 238, 0.25);
 }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #070a12;
+  color: #2eebff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+*:focus-visible {
+  outline: 2px solid #2eebff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

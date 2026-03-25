@@ -12,24 +12,23 @@ export default function ServicesPage() {
       >
         <div className="grid gap-4 md:grid-cols-2">
           {site.services.map((s) => (
-            <div key={s.title} className="rounded-2xl border border-white/10 bg-panel/30 p-6">
-              <div className="text-lg font-semibold">{s.title}</div>
+            <article key={s.title} className="rounded-2xl border border-white/10 bg-panel/30 p-6">
+              <h3 className="text-lg font-semibold">{s.title}</h3>
               <ul className="mt-3 list-disc pl-5 text-slate-300">
                 {s.bullets.map((b) => (
                   <li key={b}>{b}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </Section>
 
       <Section title="Engagement model" subtitle="Clear scope, tight feedback loops, and production hygiene.">
         <div className="rounded-2xl border border-white/10 bg-panel/30 p-6 text-slate-300">
-          Audit → Plan → Build → QA → Launch → Iterate (optional ongoing support)
+          <p>Audit → Plan → Build → QA → Launch → Iterate (optional ongoing support)</p>
         </div>
       </Section>
     </div>
   );
 }
-

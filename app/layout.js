@@ -25,9 +25,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Nav />
-        <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">{children}</main>
-        <footer className="border-t border-white/10">
+        <main id="main-content" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          {children}
+        </main>
+        <footer className="border-t border-white/10" role="contentinfo">
           <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-300">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <span>© {new Date().getFullYear()} Quantum Shop Studio LLC</span>
@@ -35,14 +40,16 @@ export default function RootLayout({ children }) {
                 <span className="text-slate-400">
                   Shopify theme engineering • GitHub workflows • AI-accelerated delivery
                 </span>
-                <div className="flex gap-4">
-                  <Link className="text-slate-300 hover:text-white hover:underline" href="/terms">
-                    Terms of Use
-                  </Link>
-                  <Link className="text-slate-300 hover:text-white hover:underline" href="/privacy">
-                    Privacy Policy
-                  </Link>
-                </div>
+                <nav aria-label="Legal">
+                  <div className="flex gap-4">
+                    <Link className="text-slate-300 hover:text-white hover:underline" href="/terms">
+                      Terms of Use
+                    </Link>
+                    <Link className="text-slate-300 hover:text-white hover:underline" href="/privacy">
+                      Privacy Policy
+                    </Link>
+                  </div>
+                </nav>
               </div>
             </div>
           </div>
