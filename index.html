@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta
+    name="description"
+    content="Quantum Shop Studio LLC — Shopify theme development, Liquid customization, Shopify 2.0, and GitHub-connected workflows accelerated with AI."
+  />
+  <title>Quantum Shop Studio LLC — Shopify Theme Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Skip to main content link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav__logo" href="index.html" aria-current="page">
+        <svg class="nav__logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <!-- Quantum atom/electron orbit logo -->
+          <!-- Center nucleus -->
+          <circle cx="24" cy="24" r="3" fill="#FF2EBF"/>
+
+          <!-- Electron orbits -->
+          <circle cx="24" cy="24" r="12" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.6"/>
+          <circle cx="24" cy="24" r="16" fill="none" stroke="#FF2EBF" stroke-width="0.75" opacity="0.4"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.3"/>
+
+          <!-- Orbiting electrons -->
+          <circle cx="36" cy="24" r="2" fill="#2EEBFF"/>
+          <circle cx="12" cy="24" r="2" fill="#FF2EBF"/>
+          <circle cx="24" cy="12" r="2" fill="#2EEBFF"/>
+          <circle cx="24" cy="36" r="2" fill="#FF2EBF"/>
+
+          <!-- Corner electrons (diagonal) -->
+          <circle cx="32.2" cy="15.8" r="1.5" fill="#2EEBFF" opacity="0.7"/>
+          <circle cx="15.8" cy="32.2" r="1.5" fill="#FF2EBF" opacity="0.7"/>
+        </svg>
+        <span class="nav__logo-text">Quantum Shop Studio</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav__desktop" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+        type="button"
+      >
+        <svg
+          class="nav__hamburger"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav
+      id="mobile-nav"
+      class="nav__mobile"
+      aria-label="Mobile navigation"
+      hidden
+    >
+      <ul role="list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <!-- Decorative background glows -->
+      <div class="hero__glow hero__glow--cyan" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--magenta" aria-hidden="true"></div>
+
+      <div class="hero__wrapper">
+        <div class="hero__content">
+          <p class="hero__founder">John Doe</p>
+          <h1 id="hero-heading" class="hero__title" style="line-height: 1.1;">
+            <span style="display: block; font-family: 'JetBrains Mono', 'Arial', 'Helvetica', sans-serif; font-weight: 100; font-size: 1.15em; letter-spacing: -0.015em; text-transform: uppercase; color: var(--color-cyan); width: 100%; line-height: 1.1; padding: 0; margin: 0;">Quantum</span>
+            <span style="display: block; font-family: 'JetBrains Mono', 'Arial', 'Helvetica', sans-serif; max-width: 3rem; padding: 0; margin: 0; font-weight: 400;">Shop Studio</span>
+          </h1>
+          <p class="hero__tagline">Shopify Theme Development Specialist</p>
+          <p class="hero__subtitle">
+            I build Shopify storefronts that scale with your business. Through transparent communication, proactive optimization, and ongoing support, I help you grow sustainable revenue while keeping your store maintainable and future-proof.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="portfolio.html">View Portfolio</a>
+            <a class="btn btn--secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Hero Video -->
+        <div class="hero__video-container">
+          <div class="hero__video-wrapper">
+            <iframe
+              src="https://www.loom.com/embed/YOUR_LOOM_VIDEO_ID"
+              title="John Doe - Quantum Shop Studio intro - Shopify theme development specialist explaining service approach"
+              frameborder="0"
+              allow="fullscreen"
+              class="hero__video"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Key Capabilities -->
+        <ul
+          class="hero__highlights"
+          role="list"
+          aria-label="Key capabilities"
+        >
+          <li class="card card--highlight">
+            <h2 class="card__title">Cloud Code + AI Workflows</h2>
+            <p class="card__body">VAT AI + GitHub for smarter, faster development.</p>
+          </li>
+          <li class="card card--highlight">
+            <h2 class="card__title">Shopify Flow Automation</h2>
+            <p class="card__body">Workflows that run your business 24/7.</p>
+          </li>
+          <li class="card card--highlight">
+            <h2 class="card__title">Performance & Conversion</h2>
+            <p class="card__body">Optimized stores that sell, not just look good.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="services-heading" class="section__title">Services</h2>
+          <p class="section__subtitle">
+            Specialized Shopify engineering with a production workflow.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="card card--service">
+            <h3 class="card__title">Shopify Theme Development</h3>
+            <ul class="card__list">
+              <li>Online Store 2.0 sections & blocks</li>
+              <li>Cloud Code CLI for rapid development</li>
+              <li>Clean, maintainable Liquid code</li>
+            </ul>
+          </article>
+
+          <article class="card card--service">
+            <h3 class="card__title">Shopify Flow Automation</h3>
+            <ul class="card__list">
+              <li>Customer segmentation workflows</li>
+              <li>Post-purchase automations & email triggers</li>
+              <li>Inventory & discount rule automation</li>
+            </ul>
+          </article>
+
+          <article class="card card--service">
+            <h3 class="card__title">Store & Page Optimization</h3>
+            <ul class="card__list">
+              <li>Core Web Vitals & performance strategy</li>
+              <li>Conversion rate optimization</li>
+              <li>Image optimization & asset management</li>
+            </ul>
+          </article>
+
+          <article class="card card--service">
+            <h3 class="card__title">GitHub + AI Workflows</h3>
+            <ul class="card__list">
+              <li>VAT AI integration for smarter development</li>
+              <li>Repo-per-client with PR-based delivery</li>
+              <li>GitHub Actions & Shopify CLI automation</li>
+            </ul>
+          </article>
+
+          <article class="card card--service">
+            <h3 class="card__title">Liquid Editing & Custom Features</h3>
+            <ul class="card__list">
+              <li>Metafields & metaobjects</li>
+              <li>Custom sections, snippets, JSON templates</li>
+              <li>App integrations with clean boundaries</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section class="section how-i-work" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="process-heading" class="section__title">How I Work</h2>
+          <p class="section__subtitle">
+            A transparent, customer-first process designed to ensure we're the right fit for your project.
+          </p>
+        </div>
+
+        <div class="process__grid">
+          <article class="process__step">
+            <div class="process__number">1</div>
+            <h3 class="process__title">Email Consultation</h3>
+            <p class="process__description">
+              Reach out via email with a brief overview of your store, goals, and challenges. I'll review your situation and suggest a time for our call.
+            </p>
+          </article>
+
+          <article class="process__step">
+            <div class="process__number">2</div>
+            <h3 class="process__title">30-Minute Proton Meet Call</h3>
+            <p class="process__description">
+              I'll send you a private Proton Meet room link. We'll dive deep into your requirements, discuss your vision, and explore how I can help.
+            </p>
+          </article>
+
+          <article class="process__step">
+            <div class="process__number">3</div>
+            <h3 class="process__title">Custom Proposal</h3>
+            <p class="process__description">
+              Based on our conversation, I'll send a detailed proposal with timeline, scope, and investment. No pressure—if we're not the right fit, there's zero cost.
+            </p>
+          </article>
+        </div>
+
+        <div class="card card--panel process__guarantee" role="status">
+          <p class="process__guarantee-text">
+            <strong>100% Risk-Free:</strong> The consultation and proposal are completely free. If we can't meet your expectations or align on requirements, there's no obligation and no cost to you. I put you first.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="section workflow" aria-labelledby="workflow-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="workflow-heading" class="section__title">Workflow</h2>
+          <p class="section__subtitle">
+            How client themes stay connected to GitHub for safe, repeatable
+            delivery.
+          </p>
+        </div>
+
+        <div class="card card--panel">
+          <ol class="workflow__steps" aria-label="Delivery workflow steps">
+            <li class="workflow__step">
+              <h3 class="workflow__step-title">1) Connect</h3>
+              <p>
+                Repo-per-client theme, Shopify Partner access, and secrets
+                stored server-side.
+              </p>
+            </li>
+            <li class="workflow__step">
+              <h3 class="workflow__step-title">2) Build</h3>
+              <p>
+                Pull requests for every change, preview branches, and clear
+                release notes.
+              </p>
+            </li>
+            <li class="workflow__step">
+              <h3 class="workflow__step-title">3) Ship</h3>
+              <p>
+                Automation, backups, rollback plan, and performance budget
+                enforcement.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="about-heading" class="section__title">About</h2>
+          <p class="section__subtitle">
+            Shopify development with engineering discipline.
+          </p>
+        </div>
+
+        <div class="card card--panel">
+          <p class="about__bio">
+            I build Shopify storefronts as long-term partnerships. I believe in transparency, honest communication, and continuously improving your store—not just at launch, but months and years later. I use modern tooling (Cursor, GitHub, Shopify CLI) to move fast, but always with maintainability and your success in mind. When you work with me, you're investing in a relationship, not just a project.
+          </p>
+
+          <ul
+            class="about__pillars"
+            role="list"
+            aria-label="Development approach"
+          >
+            <li class="card card--pillar">
+              <h3 class="card__title">Stack</h3>
+              <p class="card__body">
+                Shopify CLI • Liquid • GitHub • Actions • Cursor
+              </p>
+            </li>
+            <li class="card card--pillar">
+              <h3 class="card__title">Principles</h3>
+              <p class="card__body">
+                Performance budgets • Accessibility • Maintainability
+              </p>
+            </li>
+            <li class="card card--pillar">
+              <h3 class="card__title">Ongoing Support</h3>
+              <p class="card__body">
+                Proactive optimization • Clear communication • Long-term partnership
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section__header">
+          <h2 id="contact-heading" class="section__title">Let's Build Together</h2>
+          <p class="section__subtitle">
+            Tell me about your store, your goals, and what success looks like for you.
+            I'll be honest about what's possible and how I can help you grow.
+          </p>
+        </div>
+
+        <div class="card card--panel contact__placeholder" role="status">
+          <p class="contact__coming-soon">
+            Ready to start a conversation?
+            <a href="mailto:contact@quantumshopstudio.com" class="link"
+              >Send me an email</a
+            >
+            with a bit about your project. I'll get back to you within 24 hours.
+          </p>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+            <strong>Note:</strong> I specialize in working with US-based Shopify store owners. All development, communication, and operations are conducted domestically within the U.S. This approach ensures clear communication, reliable support, and the deepest understanding of your store's needs.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy"
+          >© 2026 Quantum Shop Studio LLC. All rights reserved.</span
+        >
+        <div class="site-footer__right">
+          <span class="site-footer__tagline">
+            Shopify theme engineering • GitHub workflows • AI-accelerated
+            delivery
+          </span>
+          <nav class="site-footer__legal" aria-label="Legal links">
+            <ul role="list">
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

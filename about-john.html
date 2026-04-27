@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta
+    name="description"
+    content="John Doe - Front-End Developer and Shopify Specialist with 8+ years of experience in web development, digital transformation, and technical leadership."
+  />
+  <title>About John Doe — Quantum Shop Studio LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    /* Responsive layout for education and certification cards */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    .about-john-card a {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+
+    .about-john-card a {
+      flex-shrink: 0;
+    }
+
+    .about-john-card a img {
+      width: 100px !important;
+      height: 100px !important;
+      display: block !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* About section responsive layout */
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+      .about-john-card {
+        grid-template-columns: 80px 1fr !important;
+        grid-template-rows: auto auto;
+        gap: 1rem !important;
+      }
+
+      .about-john-card a,
+      .about-john-card > img {
+        grid-row: 1;
+        grid-column: 1;
+        width: 80px !important;
+        height: 80px !important;
+      }
+
+      .about-john-card a img,
+      .about-john-card > img {
+        width: 80px !important;
+        height: 80px !important;
+      }
+
+      .about-john-card > div {
+        display: contents;
+      }
+
+      .about-john-card > div h3 {
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 !important;
+        align-self: start;
+      }
+
+      .about-john-card > div .detail-grid,
+      .about-john-card > div .education-info {
+        grid-row: 2;
+        grid-column: 1 / -1;
+      }
+
+      .about-john-card > div .detail-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      main {
+        overflow-x: hidden;
+      }
+
+      .container {
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      .about-john-card {
+        padding: 0.75rem !important;
+        gap: 0.5rem !important;
+        grid-template-columns: 80px 1fr !important;
+        grid-template-rows: auto auto;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .about-john-card a,
+      .about-john-card > img {
+        grid-row: 1;
+        grid-column: 1;
+        width: 80px !important;
+        height: 80px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .about-john-card a img,
+      .about-john-card > img {
+        width: 80px !important;
+        height: 80px !important;
+      }
+
+      .about-john-card > div {
+        display: contents;
+      }
+
+      .about-john-card > div h3 {
+        grid-row: 1;
+        grid-column: 2;
+        margin: 0 !important;
+        align-self: start;
+        font-size: var(--text-lg) !important;
+        word-break: break-word;
+      }
+
+      .about-john-card > div .detail-grid,
+      .about-john-card > div .education-info {
+        grid-row: 2;
+        grid-column: 1 / -1;
+      }
+
+      .about-john-card > div .detail-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav__logo" href="index.html">
+        <svg class="nav__logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="3" fill="#FF2EBF"/>
+          <circle cx="24" cy="24" r="12" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.6"/>
+          <circle cx="24" cy="24" r="16" fill="none" stroke="#FF2EBF" stroke-width="0.75" opacity="0.4"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.3"/>
+          <circle cx="36" cy="24" r="2" fill="#2EEBFF"/>
+          <circle cx="12" cy="24" r="2" fill="#FF2EBF"/>
+          <circle cx="24" cy="12" r="2" fill="#2EEBFF"/>
+          <circle cx="24" cy="36" r="2" fill="#FF2EBF"/>
+          <circle cx="32.2" cy="15.8" r="1.5" fill="#2EEBFF" opacity="0.7"/>
+          <circle cx="15.8" cy="32.2" r="1.5" fill="#FF2EBF" opacity="0.7"/>
+        </svg>
+        <span class="nav__logo-text">Quantum Shop Studio</span>
+      </a>
+
+      <nav class="nav__desktop" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+        type="button"
+      >
+        <svg
+          class="nav__hamburger"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation" hidden>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="section about-intro" aria-labelledby="about-heading" style="padding-top: 3rem;">
+      <div class="container">
+        <div class="about-intro-grid">
+          <div>
+            <h1 id="about-heading" class="page-title">About John Doe</h1>
+            <p class="page-intro">
+              Founder of Quantum Shop Studio — a Front-End Developer with 8+ years specializing in custom web development, SharePoint modernization, and AI-accelerated coding. I leverage modern tools and AI research assistance to build scalable, user-centric solutions faster.
+            </p>
+            <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 1rem; font-style: italic;">
+              I work exclusively with US-based Shopify store owners to ensure the deepest level of communication, trust, and partnership. This focus allows me to provide specialized support and maintain the reliability you need for long-term success.
+            </p>
+          </div>
+          <div style="aspect-ratio: 16/9; border-radius: var(--radius-lg); border: 1px solid var(--color-border); background: var(--color-panel-glass); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; color: var(--color-text-muted);">
+              <p style="font-size: var(--text-sm);">Loom Video or Image</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="background-heading" style="padding-top: 3rem;">
+      <div class="container">
+        <div style="display: grid; gap: 3rem;">
+            <!-- Professional Background -->
+            <section aria-labelledby="background-heading">
+              <h2 id="background-heading" class="section__title">Professional Background</h2>
+              <p style="color: var(--color-text-muted); line-height: var(--leading-normal);">
+                Front-End Developer with 8+ years architecting and delivering custom web solutions, with primary expertise in Microsoft SharePoint modernization, responsive design, and custom front-end code development. I specialize in leveraging AI-powered research and coding assistance tools to accelerate development cycles while maintaining code quality and accessibility standards.
+              </p>
+              <p style="color: var(--color-text-muted); margin-top: 1rem; line-height: var(--leading-normal);">
+                My primary focus is building and customizing SharePoint Online solutions, developing responsive front-end interfaces, and creating maintainable custom code. I also offer complementary services in Shopify theme development and storefront optimization. I'm passionate about modern web standards, accessibility, performance optimization, and using AI tools responsibly to help clients achieve their digital goals efficiently.
+              </p>
+            </section>
+
+            <!-- Core Expertise -->
+            <section aria-labelledby="expertise-heading">
+              <h2 id="expertise-heading" class="section__title">Core Expertise</h2>
+              <div style="display: grid; gap: 1.5rem;">
+                <div>
+                  <h3 style="color: var(--color-cyan); font-size: var(--text-lg); margin-bottom: 0.75rem;">Web Development & Design</h3>
+                  <p style="color: var(--color-text-muted);">
+                    HTML5 • CSS3 (Flexbox, Grid) • JavaScript (Vanilla JS, JSON) • Liquid (Shopify, Microsoft Power Pages) • XML •
+                    Git/GitHub • Power Automate • PowerApps • PowerFx • Adobe Creative Suite • Dreamweaver • Java • C++ • ASP.NET
+                    (Razor Pages) • Linux • Microsoft 365 (Teams, Planner, Excel, Outlook, Forms) • SharePoint Online • Responsive
+                    Design • Front-End Architecture • WCAG 2.1 AA Accessibility • ADA Compliance • Accessibility Enhancement
+                  </p>
+                </div>
+                <div>
+                  <h3 style="color: var(--color-magenta); font-size: var(--text-lg); margin-bottom: 0.75rem;">Technical Leadership & Strategy</h3>
+                  <p style="color: var(--color-text-muted);">
+                    Digital Transformation • Requirements Gathering • Agile/Scrum Methodology • AI-powered Research & Problem-Solving (Claude Coding Agent, Agentic Workflows) •
+                    Technical Documentation • Team Leadership • Project Coordination • User Training & Support • Quality Assurance &
+                    Testing • Security and Compliance • Risk Assessment • Team Supervision • Operational Efficiency Optimization •
+                    Performance Optimization
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Education -->
+            <section aria-labelledby="education-heading">
+              <h2 id="education-heading" class="section__title">Education</h2>
+              <div style="display: grid; gap: 1rem;">
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-cyan); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <img src="img/devry-education-shield-75th-year-seeklogo.png" alt="DeVry University logo" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem;">
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      Bachelor of Science in Computer Information Systems
+                    </h3>
+                    <div class="education-info" style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                      <p style="color: var(--color-text); margin: 0; font-size: var(--text-sm);">DeVry University • Feb 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-cyan); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <img src="img/devry-education-shield-75th-year-seeklogo.png" alt="DeVry University logo" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem;">
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      Bachelor of Science in Multimedia Design and Development
+                    </h3>
+                    <div class="education-info" style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                      <p style="color: var(--color-text); margin: 0; font-size: var(--text-sm);">DeVry University • Oct 2018</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-cyan); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <img src="img/devry-education-shield-75th-year-seeklogo.png" alt="DeVry University logo" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem;">
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      Associate of Applied Science in Information Technology & Networking
+                    </h3>
+                    <div class="education-info" style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                      <p style="color: var(--color-text); margin: 0; font-size: var(--text-sm);">DeVry University • Feb 2021</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-magenta); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <img src="img/u-s-air-force-seeklogo.png" alt="United States Air Force logo" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem;">
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      Associate in Applied Science in Criminal Justice
+                    </h3>
+                    <div class="education-info" style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                      <p style="color: var(--color-text); margin: 0; font-size: var(--text-sm);">Community College of the Air Force (CCAF) • Oct 2017</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Certifications -->
+            <section aria-labelledby="certs-heading">
+              <h2 id="certs-heading" class="section__title">Professional Certifications</h2>
+              <div style="display: grid; gap: 1rem;">
+                <!-- CompTIA Security+ -->
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-cyan); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <a href="https://www.credly.com/badges/1a5a2edd-1d7c-4065-87b3-3821c65c5062/linked_in_profile" target="_blank" rel="noopener noreferrer" style="display: block; border-radius: var(--radius-md); overflow: hidden; text-decoration: none;" aria-label="View CompTIA Security+ Certification credential">
+                    <img src="img/Security+-png.png" alt="CompTIA Security+ Certification badge - Click to view credential" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem; cursor: pointer; transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);">
+                  </a>
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      CompTIA Security+ CE
+                    </h3>
+                    <div class="detail-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Issued Date</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">July 16, 2021</p>
+                      </div>
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Issued By</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">CompTIA</p>
+                      </div>
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Issued Using</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">Credly</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Microsoft PL-900 -->
+                <div class="about-john-card" style="padding: 1rem; border-left: 3px solid var(--color-magenta); background: var(--color-panel-glass); display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start;">
+                  <a href="https://learn.microsoft.com/en-us/users/justinscaman-5697/credentials/544615cef9ed0cdb?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noopener noreferrer" style="display: block; border-radius: var(--radius-md); overflow: hidden; text-decoration: none;" aria-label="View Microsoft PL-900 Power Platform Fundamentals Certification credential">
+                    <img src="img/microsoft-certified-fundamentals-badge.png" alt="Microsoft PL-900 Power Platform Fundamentals Certification badge - Click to view credential" style="width: 100px; height: 100px; object-fit: contain; border-radius: var(--radius-md); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); padding: 0.5rem; cursor: pointer; transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);">
+                  </a>
+                  <div>
+                    <h3 style="color: var(--color-text); margin: 0 0 0.75rem 0; font-weight: var(--weight-semibold);">
+                      Microsoft PL-900 – Power Platform Fundamentals
+                    </h3>
+                    <div class="detail-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Issued Date</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">March 5, 2026</p>
+                      </div>
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Issued By</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">Microsoft</p>
+                      </div>
+                      <div style="padding: 0.75rem; background: var(--color-panel); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <p style="color: var(--color-text-faint); margin: 0; font-size: var(--text-xs); font-weight: var(--weight-semibold); text-transform: uppercase; letter-spacing: 0.05em;">Credential ID</p>
+                        <p style="color: var(--color-text); margin: 0.25rem 0 0 0; font-size: var(--text-sm);">544615CEF9ED0CDB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Leadership & Recognition -->
+            <section aria-labelledby="recognition-heading">
+              <h2 id="recognition-heading" class="section__title">Leadership & Recognition</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1rem; line-height: var(--leading-normal);">
+                Recognized for technical excellence, digital innovation, and strategic leadership in complex environments.
+                Proven track record of supervising and training technical teams, delivering mission-critical projects, and
+                driving organizational transformation through modernization initiatives.
+              </p>
+              <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem;" role="list" aria-label="Leadership achievements and recognition">
+                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-cyan); border-radius: var(--radius-md); color: var(--color-text-muted);">
+                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-cyan); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
+                    <span>Honored for advancing digital solutions and innovation (2024)</span>
+                  </span>
+                </li>
+                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-magenta); border-radius: var(--radius-md); color: var(--color-text-muted);">
+                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-magenta); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
+                    <span>Commended for outstanding leadership, project execution, and professional excellence</span>
+                  </span>
+                </li>
+                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-cyan); border-radius: var(--radius-md); color: var(--color-text-muted);">
+                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-cyan); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
+                    <span>Led modernization of legacy systems, architecting secure, responsive platforms</span>
+                  </span>
+                </li>
+                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-magenta); border-radius: var(--radius-md); color: var(--color-text-muted);">
+                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-magenta); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
+                    <span>Directed cross-functional teams of contractors to align priorities with organizational objectives</span>
+                  </span>
+                </li>
+                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-cyan); border-radius: var(--radius-md); color: var(--color-text-muted);">
+                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-cyan); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
+                    <span>Achieved 98% qualification rate on duty and readiness evaluations through effective team training and supervision</span>
+                  </span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Contact CTA -->
+            <section aria-labelledby="contact-cta-heading">
+              <div class="card card--panel" style="text-align: center; background: linear-gradient(135deg, var(--color-cyan-dim) 0%, var(--color-panel-glass) 100%); border: 1px solid var(--color-cyan);">
+                <h2 id="contact-cta-heading" style="color: var(--color-text); margin-top: 0;">Interested in Working Together?</h2>
+                <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+                  Whether you're looking for Shopify development services or exploring career opportunities, I'd love to hear from you.
+                </p>
+                <a href="index.html#contact" class="btn btn--primary">Get in Touch</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">© 2026 Quantum Shop Studio LLC. All rights reserved.</span>
+        <div class="site-footer__right">
+          <span class="site-footer__tagline">
+            Shopify theme engineering • GitHub workflows • AI-accelerated delivery
+          </span>
+          <nav class="site-footer__legal" aria-label="Legal links">
+            <ul role="list">
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

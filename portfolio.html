@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta
+    name="description"
+    content="Portfolio of Shopify theme development work, store setups, and GitHub-connected delivery workflows — Quantum Shop Studio LLC."
+  />
+  <title>Portfolio — Quantum Shop Studio LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Skip to main content link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav__logo" href="index.html">
+        <svg class="nav__logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <!-- Quantum atom/electron orbit logo -->
+          <!-- Center nucleus -->
+          <circle cx="24" cy="24" r="3" fill="#FF2EBF"/>
+
+          <!-- Electron orbits -->
+          <circle cx="24" cy="24" r="12" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.6"/>
+          <circle cx="24" cy="24" r="16" fill="none" stroke="#FF2EBF" stroke-width="0.75" opacity="0.4"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#2EEBFF" stroke-width="0.75" opacity="0.3"/>
+
+          <!-- Orbiting electrons -->
+          <circle cx="36" cy="24" r="2" fill="#2EEBFF"/>
+          <circle cx="12" cy="24" r="2" fill="#FF2EBF"/>
+          <circle cx="24" cy="12" r="2" fill="#2EEBFF"/>
+          <circle cx="24" cy="36" r="2" fill="#FF2EBF"/>
+
+          <!-- Corner electrons (diagonal) -->
+          <circle cx="32.2" cy="15.8" r="1.5" fill="#2EEBFF" opacity="0.7"/>
+          <circle cx="15.8" cy="32.2" r="1.5" fill="#FF2EBF" opacity="0.7"/>
+        </svg>
+        <span class="nav__logo-text">Quantum Shop Studio</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav__desktop" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+        type="button"
+      >
+        <svg
+          class="nav__hamburger"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav
+      id="mobile-nav"
+      class="nav__mobile"
+      aria-label="Mobile navigation"
+      hidden
+    >
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1">
+    <!-- Page Header -->
+    <section class="section portfolio-intro" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <h1 id="portfolio-heading" class="page-title">Recent Work</h1>
+        <p class="page-intro">
+          Below are examples of Shopify stores I've worked on: theme rebuilds that improved performance and conversions, GitHub-connected workflows that make updates safe and repeatable, complete store setups from scratch, and Shopify Flow automations that run the business. Each project reflects a real partnership focused on transparency, continuous improvement, and sustainable growth.
+        </p>
+        <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+          <strong>Focus on US-based partnerships:</strong> I work exclusively with US-based Shopify store owners to ensure the deepest level of communication, trust, and partnership. This specialization allows me to provide the attentive support and reliability you need for sustained growth and long-term success.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="section portfolio-filters" aria-labelledby="filter-heading">
+      <div class="container">
+        <h2 id="filter-heading" class="sr-only">Filter projects</h2>
+        <div
+          class="filter-bar"
+          role="group"
+          aria-label="Filter projects by category"
+        >
+          <button
+            class="filter-btn filter-btn--active"
+            data-filter="all"
+            aria-pressed="true"
+            type="button"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="theme-dev"
+            aria-pressed="false"
+            type="button"
+          >
+            Theme Dev
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="store-setup"
+            aria-pressed="false"
+            type="button"
+          >
+            Store Setup
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="ai-integration"
+            aria-pressed="false"
+            type="button"
+          >
+            AI Integration
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="shopify-20"
+            aria-pressed="false"
+            type="button"
+          >
+            Shopify 2.0
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="shopify-flow"
+            aria-pressed="false"
+            type="button"
+          >
+            Shopify Flow
+          </button>
+        </div>
+
+        <!-- Live region for filter announcements -->
+        <div
+          id="filter-status"
+          class="sr-only"
+          aria-live="polite"
+          aria-atomic="true"
+          role="status"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section
+      class="section portfolio-grid-section"
+      aria-labelledby="projects-heading"
+    >
+      <div class="container">
+        <h2 id="projects-heading" class="sr-only">Projects</h2>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Project Card 1: Theme rebuild + speed lift -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-1-title"
+            data-tags="theme-dev shopify-20"
+          >
+            <figure class="card__media">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-aeb19be489c7?w=800&h=450&fit=crop"
+                alt="Analytics dashboard showing Core Web Vitals improvement: LCP reduced from 3.2s to 1.8s, CLS from 0.15 to 0.05, and FID improvements across desktop and mobile"
+                loading="lazy"
+                class="card__img"
+                width="800"
+                height="450"
+              />
+              <figcaption class="sr-only">
+                Screenshot of performance metrics dashboard
+              </figcaption>
+            </figure>
+
+            <div class="card__video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/placeholder1"
+                title="Walkthrough: Theme rebuild and speed optimization — before/after Core Web Vitals comparison showing reduced layout shift and improved responsiveness"
+                loading="lazy"
+                allow="fullscreen"
+                class="card__iframe"
+                width="640"
+                height="360"
+              ></iframe>
+            </div>
+
+            <div class="card__body">
+              <h3 id="card-1-title" class="card__title">
+                Theme rebuild + speed lift
+              </h3>
+              <p class="card__description">
+                Refactored sections & critical assets to reduce layout shift and
+                improve responsiveness across devices. Achieved target Core Web
+                Vitals metrics through systematic optimization of render-blocking
+                resources and image delivery.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">OS 2.0</li>
+                <li class="tag">Performance</li>
+                <li class="tag">Liquid</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project Card 2: GitHub workflow -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-2-title"
+            data-tags="theme-dev ai-integration"
+          >
+            <div class="card__video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/placeholder2"
+                title="Walkthrough: GitHub-connected Shopify theme delivery workflow with PR-based branching, Shopify CLI automation, and rollback procedures"
+                loading="lazy"
+                allow="fullscreen"
+                class="card__iframe"
+                width="640"
+                height="360"
+              ></iframe>
+            </div>
+
+            <div class="card__body">
+              <h3 id="card-2-title" class="card__title">
+                Feature delivery via GitHub workflow
+              </h3>
+              <p class="card__description">
+                Established a repo-per-client theme structure with PR-based delivery,
+                preview branches for client review, and automated backups. Every
+                deployment is auditable and reversible with a one-command rollback.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">GitHub Actions</li>
+                <li class="tag">Shopify CLI</li>
+                <li class="tag">Release process</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project Card 3: Store setup -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-3-title"
+            data-tags="store-setup shopify-20 shopify-flow"
+          >
+            <figure class="card__media">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop"
+                alt="Shopify admin dashboard showing a configured product catalog with collection navigation, product page template customizations, and Shopify Flow automation rules for cart abandonment recovery"
+                loading="lazy"
+                class="card__img"
+                width="800"
+                height="450"
+              />
+              <figcaption class="sr-only">
+                Screenshot of Shopify admin store configuration
+              </figcaption>
+            </figure>
+
+            <div class="card__body">
+              <h3 id="card-3-title" class="card__title">
+                Store setup + UX cleanup
+              </h3>
+              <p class="card__description">
+                Comprehensive store setup including payment gateway configuration,
+                tax and shipping rules, catalog structure optimization, and
+                collection navigation improvements. Implemented Shopify Flow
+                automations for abandoned cart recovery and post-purchase
+                engagement.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">Setup</li>
+                <li class="tag">Shopify Flow</li>
+                <li class="tag">UX</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project Card 4: Liquid customization + AI -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-4-title"
+            data-tags="theme-dev ai-integration shopify-20"
+          >
+            <div class="card__video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/placeholder4"
+                title="Walkthrough: AI-assisted Liquid customization using Cursor — dynamic product recommendation sections built with metafields and custom Liquid snippets"
+                loading="lazy"
+                allow="fullscreen"
+                class="card__iframe"
+                width="640"
+                height="360"
+              ></iframe>
+            </div>
+
+            <div class="card__body">
+              <h3 id="card-4-title" class="card__title">
+                Liquid customization with AI assistance
+              </h3>
+              <p class="card__description">
+                Built custom product recommendation sections using Liquid,
+                metafields, and JSON schema with AI-assisted code generation.
+                Integrated third-party product recommendation APIs with clean
+                error handling and fallback behavior.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">Liquid</li>
+                <li class="tag">Metafields</li>
+                <li class="tag">AI Integration</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project Card 5: Multi-currency store -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-5-title"
+            data-tags="store-setup shopify-20"
+          >
+            <figure class="card__media">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&h=450&fit=crop"
+                alt="Storefront screenshot showing a multi-currency product page with language selector, localized pricing display, and region-specific shipping options configured in Shopify"
+                loading="lazy"
+                class="card__img"
+                width="800"
+                height="450"
+              />
+              <figcaption class="sr-only">
+                Screenshot of multi-currency storefront
+              </figcaption>
+            </figure>
+
+            <div class="card__body">
+              <h3 id="card-5-title" class="card__title">
+                Multi-currency & multi-market store setup
+              </h3>
+              <p class="card__description">
+                Set up a multi-market Shopify store with localized pricing,
+                currency conversion, region-specific shipping, and tax compliance.
+                Implemented language switcher and market detection for seamless
+                customer experience across geographies.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">Setup</li>
+                <li class="tag">Shopify 2.0</li>
+                <li class="tag">Multi-market</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project Card 6: Automation workflows -->
+          <article
+            class="card card--project"
+            aria-labelledby="card-6-title"
+            data-tags="shopify-flow ai-integration"
+          >
+            <div class="card__video-wrapper">
+              <iframe
+                src="https://www.loom.com/embed/placeholder6"
+                title="Walkthrough: Shopify Flow automation setup — customer segmentation, post-purchase email triggers, inventory management, and discount automation"
+                loading="lazy"
+                allow="fullscreen"
+                class="card__iframe"
+                width="640"
+                height="360"
+              ></iframe>
+            </div>
+
+            <div class="card__body">
+              <h3 id="card-6-title" class="card__title">
+                Shopify Flow automation suite
+              </h3>
+              <p class="card__description">
+                Designed and implemented a suite of Shopify Flow automations
+                including customer segmentation workflows, post-purchase email
+                triggers, inventory management, and dynamic discount rules. Reduced
+                manual operational overhead and improved customer engagement metrics.
+              </p>
+              <ul class="card__tags" role="list" aria-label="Project tags">
+                <li class="tag">Shopify Flow</li>
+                <li class="tag">Automation</li>
+                <li class="tag">AI Integration</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy"
+          >© 2026 Quantum Shop Studio LLC. All rights reserved.</span
+        >
+        <div class="site-footer__right">
+          <span class="site-footer__tagline">
+            Shopify theme engineering • GitHub workflows • AI-accelerated
+            delivery
+          </span>
+          <nav class="site-footer__legal" aria-label="Legal links">
+            <ul role="list">
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+</body>
+</html>
