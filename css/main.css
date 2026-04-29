@@ -446,6 +446,10 @@ section {
   .hero__highlights {
     grid-template-columns: 1fr !important;
   }
+
+  .about__pillars {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ============================================================================
