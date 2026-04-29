@@ -442,6 +442,10 @@ section {
   .services__grid {
     grid-template-columns: 1fr;
   }
+
+  .hero__highlights {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================================
