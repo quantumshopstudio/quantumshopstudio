@@ -438,6 +438,10 @@ section {
     width: 85%;
     height: auto;
   }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================================
