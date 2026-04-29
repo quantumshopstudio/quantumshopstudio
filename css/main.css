@@ -440,11 +440,11 @@ section {
   }
 
   .services__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .hero__highlights {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
