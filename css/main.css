@@ -324,8 +324,9 @@ section {
 }
 
 .nav__logo-icon {
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: 60px;
+  padding: 0.75rem 0;
   flex-shrink: 0;
 }
 
