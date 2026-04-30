@@ -601,6 +601,10 @@ section {
    Section Layout
    ============================================================================ */
 
+main {
+  padding-top: 3rem;
+}
+
 .section {
   margin-bottom: 4rem;
 }
