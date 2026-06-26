@@ -629,7 +629,7 @@ main {
 .services__grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* How I Work Process */
@@ -1078,6 +1078,15 @@ main {
 .site-footer__legal a:hover {
   color: var(--color-cyan);
   text-decoration: underline;
+}
+
+.legal-disclaimer {
+  max-width: 72ch;
+  margin: .75rem auto 0;
+  font-size: .72rem;
+  line-height: 1.5;
+  color: #8a93a8;        /* muted, matches the banner */
+  text-align: center;
 }
 
 /* ============================================================================
