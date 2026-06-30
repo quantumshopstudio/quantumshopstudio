@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="AI Use Policy — how Quantum Shop Studio LLC uses AI tools under human supervision, with a human-in-the-loop review process and no autonomous deployment." />
+  <title>AI Use Policy — Quantum Shop Studio LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav__logo" href="index.html">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mark.svg" />
+          <img src="img/quantum-shop-studio-header-lockup.svg" alt="Quantum Shop Studio - Shopify theme development" class="nav__logo-icon" />
+        </picture>
+      </a>
+
+      <nav class="nav__desktop" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open navigation menu"
+        type="button"
+      >
+        <svg
+          class="nav__hamburger"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-nav" class="nav__mobile" aria-label="Mobile navigation" hidden>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="section" aria-labelledby="ai-policy-heading">
+      <div class="container">
+        <div style="max-width: var(--max-w-prose);">
+          <h1 id="ai-policy-heading" class="page-title">AI Use Policy</h1>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 0.5rem;">Effective date: June 26, 2026</p>
+          <p class="page-intro" style="margin-top: 1rem;">
+            This summary explains how Quantum Shop Studio LLC ("QSS") uses
+            artificial-intelligence tools, and the human-oversight controls that govern that use.
+            AI tools assist a qualified human developer; they do not operate autonomously and do
+            not make unsupervised changes to client environments.
+          </p>
+
+          <div style="margin-top: 3rem; display: grid; gap: 2rem;">
+            <section aria-labelledby="ai-1">
+              <h2 id="ai-1">AI assists — it does not work on its own</h2>
+              <p style="color: var(--color-text-muted);">
+                QSS uses AI coding assistants (currently Claude Code and the Cursor IDE, alongside
+                tools such as GitHub Copilot) as drafting and productivity aids under the direct
+                supervision of the principal developer. AI helps write and update code and assists
+                with research, refactoring, and review. AI does not work autonomously: it assists
+                with scoping, planning, and documentation under the developer's direction, but the
+                human developer chooses the approach, answers the open questions, and signs off on
+                every brief, plan, and release before any code reaches a live store.
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-2">
+              <h2 id="ai-2">Human-in-the-loop process</h2>
+              <p style="color: var(--color-text-muted);">
+                Every change follows a human-gated workflow before it reaches a live store: the
+                developer defines the task and acceptance criteria; AI drafts or edits code under
+                the developer's direction; the developer reviews all AI-generated output for
+                correctness, security, performance, accessibility, and intellectual-property
+                concerns; changes are tested in a development or preview environment; all work is
+                committed to Git/GitHub for full history and rollback; and the developer gives final
+                sign-off. <strong style="color: var(--color-text);">No AI output reaches a client's
+                production store without human review and approval.</strong>
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-3">
+              <h2 id="ai-3">Accountability</h2>
+              <p style="color: var(--color-text-muted);">
+                The principal developer retains full professional responsibility and final
+                decision-making authority for all delivered work, whether or not AI assisted in
+                producing it. AI tools are treated as assistants—not as autonomous agents or
+                independent decision-makers.
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-4">
+              <h2 id="ai-4">Data handling</h2>
+              <p style="color: var(--color-text-muted);">
+                QSS shares only the information necessary for a given task with AI tools. Sensitive
+                client data, customer personal data, and live credentials are not entered into AI
+                prompts. Store access is managed through Shopify's standard collaborator/staff
+                permissions and is removed at the end of an engagement.
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-5">
+              <h2 id="ai-5">Code quality, security & accessibility</h2>
+              <p style="color: var(--color-text-muted);">
+                AI-assisted code is reviewed for security (no exposed secrets; safe handling of
+                store data and credentials) and for maintainable, standards-based implementation.
+                Accessibility work targets good-faith alignment with current WCAG guidance and is
+                tested before release. QSS does not warrant or guarantee complete WCAG conformance,
+                ADA compliance, or freedom from accessibility-related claims.
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-6">
+              <h2 id="ai-6">Tools & independence</h2>
+              <p style="color: var(--color-text-muted);">
+                Current AI tools include Claude Code (Anthropic), Cursor (Anysphere), and GitHub
+                Copilot (GitHub/Microsoft). QSS is independent and is not affiliated with, sponsored
+                by, or endorsed by these providers. Tools may change; this policy applies to any AI
+                coding assistant used under the same human-oversight controls. All trademarks are
+                the property of their respective owners.
+              </p>
+            </section>
+
+            <section aria-labelledby="ai-7">
+              <h2 id="ai-7">Review</h2>
+              <p style="color: var(--color-text-muted);">
+                This policy is reviewed periodically and updated as tools, workflows, or regulatory
+                requirements change. It describes operational practices and is not a warranty or a
+                legal opinion. For engagements, the governing services agreement controls.
+              </p>
+            </section>
+          </div>
+
+          <p style="color: var(--color-text-faint); font-size: var(--text-sm); margin-top: 2.5rem;">© 2026 Quantum Shop Studio LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__inner">
+        <span class="site-footer__copy">© 2026 Quantum Shop Studio LLC. All rights reserved.</span>
+        <div class="site-footer__right">
+          <span class="site-footer__tagline" style="color: var(--color-text);">
+            Shopify theme engineering • GitHub workflows • AI-accelerated delivery
+          </span>
+          <nav class="site-footer__legal" aria-label="Legal links">
+            <ul role="list">
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="ai-policy.html" aria-current="page">AI Use Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="legal-disclaimer">
+        Quantum Shop Studio LLC is an independent agency and is not affiliated with,
+        sponsored by, or endorsed by Shopify Inc. or GitHub, Inc. Shopify, Liquid,
+        GitHub, Git, and Claude are trademarks of their respective owners.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

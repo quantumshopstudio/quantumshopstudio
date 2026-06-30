@@ -17,7 +17,6 @@
   />
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* Responsive layout for education and certification cards */
     .detail-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -28,9 +27,6 @@
       display: block;
       width: 100px;
       height: 100px;
-    }
-
-    .about-john-card a {
       flex-shrink: 0;
     }
 
@@ -38,10 +34,38 @@
       width: 100px !important;
       height: 100px !important;
       display: block !important;
-      flex-shrink: 0 !important;
     }
 
-    /* About section responsive layout */
+    /* Cert/education card layout: badge in column 1, heading top-right,
+       details span full width beneath. */
+    .about-john-card {
+      grid-template-rows: auto auto;
+    }
+
+    .about-john-card a,
+    .about-john-card > img {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .about-john-card > div {
+      display: contents;
+    }
+
+    .about-john-card > div h3 {
+      grid-row: 1;
+      grid-column: 2;
+      margin: 0 0 0.75rem 0;
+      align-self: start;
+    }
+
+    .about-john-card > div .detail-grid,
+    .about-john-card > div .education-info {
+      grid-row: 2;
+      grid-column: 1 / -1;
+    }
+
+    /* About intro: two columns on desktop, single column on mobile */
     .about-intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -55,105 +79,35 @@
         gap: 2rem;
       }
     }
+
+    /* Mobile: stack badge, heading, then details in a single column
+       so the cert text sits beneath its badge. */
+    @media (max-width: 640px) {
       .about-john-card {
-        grid-template-columns: 80px 1fr !important;
-        grid-template-rows: auto auto;
-        gap: 1rem !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto;
+        gap: 0.75rem !important;
       }
 
       .about-john-card a,
       .about-john-card > img {
         grid-row: 1;
         grid-column: 1;
-        width: 80px !important;
-        height: 80px !important;
-      }
-
-      .about-john-card a img,
-      .about-john-card > img {
-        width: 80px !important;
-        height: 80px !important;
-      }
-
-      .about-john-card > div {
-        display: contents;
       }
 
       .about-john-card > div h3 {
-        grid-row: 1;
-        grid-column: 2;
-        margin: 0 !important;
-        align-self: start;
-      }
-
-      .about-john-card > div .detail-grid,
-      .about-john-card > div .education-info {
         grid-row: 2;
-        grid-column: 1 / -1;
-      }
-
-      .about-john-card > div .detail-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      main {
-        overflow-x: hidden;
-      }
-
-      .container {
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      .about-john-card {
-        padding: 0.75rem !important;
-        gap: 0.5rem !important;
-        grid-template-columns: 80px 1fr !important;
-        grid-template-rows: auto auto;
-        max-width: 100%;
-        overflow: hidden;
-      }
-
-      .about-john-card a,
-      .about-john-card > img {
-        grid-row: 1;
         grid-column: 1;
-        width: 80px !important;
-        height: 80px !important;
-        flex-shrink: 0 !important;
-      }
-
-      .about-john-card a img,
-      .about-john-card > img {
-        width: 80px !important;
-        height: 80px !important;
-      }
-
-      .about-john-card > div {
-        display: contents;
-      }
-
-      .about-john-card > div h3 {
-        grid-row: 1;
-        grid-column: 2;
-        margin: 0 !important;
-        align-self: start;
-        font-size: var(--text-lg) !important;
-        word-break: break-word;
       }
 
       .about-john-card > div .detail-grid,
       .about-john-card > div .education-info {
-        grid-row: 2;
-        grid-column: 1 / -1;
+        grid-row: 3;
+        grid-column: 1;
       }
 
-      .about-john-card > div .detail-grid {
-        display: grid !important;
+      .detail-grid {
         grid-template-columns: 1fr !important;
-        gap: 0.5rem !important;
       }
     }
   </style>
@@ -164,7 +118,10 @@
   <header class="site-header" role="banner">
     <div class="container">
       <a class="nav__logo" href="index.html">
-        <img src="img/logo-primary.png" alt="Quantum Shop Studio - Shopify theme development" class="nav__logo-icon" />
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mark.svg" />
+          <img src="img/quantum-shop-studio-header-lockup.svg" alt="Quantum Shop Studio - Shopify theme development" class="nav__logo-icon" />
+        </picture>
       </a>
 
       <nav class="nav__desktop" aria-label="Main navigation">
@@ -217,12 +174,9 @@
       <div class="container">
         <div class="about-intro-grid">
           <div>
-            <h1 id="about-heading" class="page-title" style="font-size: clamp(1.75rem, 1.4rem + 1.75vw, 2.625rem);">Shopify Front-End Developer<br /><span style="color: var(--color-magenta);">Building Scalable, Accessible Storefronts</span></h1>
+            <h1 id="about-heading" class="page-title" style="font-size: clamp(1.3125rem, 1.05rem + 1.3125vw, 1.96875rem); text-transform: uppercase;">Shopify Front-End Developer<br /><span style="color: var(--color-text);">Building Scalable, Accessible Storefronts</span></h1>
             <p class="page-intro">
               With 8+ years of front-end expertise and 5 production Shopify development stores, I specialize in building storefronts that perform, convert, and remain accessible and maintainable long-term. I pair WCAG 2.1 AA accessibility standards with modern tooling (GitHub, Shopify CLI, Claude Code, Cursor) to deliver solutions that scale with your business.
-            </p>
-            <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 1rem; line-height: 1.6;">
-              <strong style="color: var(--color-text);">Why I'm different:</strong> I combine technical depth with genuine partnership. Your success doesn't end at launch—I provide ongoing optimization, clear communication, and proactive support. I work exclusively with US-based clients to ensure timezone alignment and the kind of responsive, hands-on collaboration that builds trust.
             </p>
           </div>
           <div style="display: flex; flex-direction: column; gap: 2rem;">
@@ -249,14 +203,14 @@
     <section class="section" style="padding-top: 3rem;">
       <div class="container">
         <!-- Key Stats Row -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
           <div style="padding: 1.5rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center;">
             <p style="color: var(--color-magenta); font-size: var(--text-4xl); font-weight: 700; margin: 0;">5</p>
             <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 0.5rem; margin-bottom: 0;">Production Development Stores</p>
           </div>
           <div style="padding: 1.5rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center;">
             <p style="color: var(--color-cyan); font-size: var(--text-4xl); font-weight: 700; margin: 0;">WCAG 2.1 AA</p>
-            <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 0.5rem; margin-bottom: 0;">Accessibility Standard</p>
+            <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 0.5rem; margin-bottom: 0;">Accessibility Target</p>
           </div>
           <div style="padding: 1.5rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center;">
             <p style="color: var(--color-cyan); font-size: var(--text-4xl); font-weight: 700; margin: 0;">8+</p>
@@ -269,13 +223,13 @@
             <section aria-labelledby="background-heading">
               <h2 id="background-heading" class="section__title">Professional Background</h2>
               <p style="color: var(--color-text-muted); line-height: 1.7;">
-                <strong style="color: var(--color-text);">Shopify Specialist.</strong> I've built and optimized 5 production Shopify storefronts in development environments, focusing on theme architecture, performance, and accessibility. Each store demonstrates real-world challenges solved: custom sections, metafield integrations, automation workflows, and WCAG 2.1 AA compliance. I've documented each with Loom walkthroughs highlighting technical approach and measurable outcomes.
+                <strong style="color: var(--color-text);">Shopify Specialist.</strong> I've built and optimized 5 production Shopify storefronts in development environments, focusing on theme architecture, performance, and accessibility. Each store demonstrates real-world challenges solved: custom sections, metafield integrations, automation workflows, and accessibility aligned with WCAG 2.1 AA standards. I've documented each with Loom walkthroughs highlighting technical approach and measurable outcomes.
               </p>
               <p style="color: var(--color-text-muted); margin-top: 1rem; line-height: 1.7;">
                 <strong style="color: var(--color-text);">Full-Stack Technical Leadership.</strong> Over 8+ years, I've led small teams (3 contractors), managed cross-functional projects, and mentored junior developers in modern web standards. I pair hands-on coding with strategic decision-making: choosing the right tools (GitHub, Shopify CLI, Liquid), maintaining code quality under deadline pressure, and ensuring accessibility doesn't compromise UX.
               </p>
               <p style="color: var(--color-text-muted); margin-top: 1rem; line-height: 1.7;">
-                <strong style="color: var(--color-text);">AI-Accelerated Development.</strong> I integrate Claude Code, Cursor, and GitHub Copilot into my workflow to move faster without sacrificing quality. These tools excel at repetitive tasks—component scaffolding, testing, documentation—freeing me to focus on architecture, accessibility, and problem-solving. The result: shorter timelines, fewer bugs, cleaner code.
+                <strong style="color: var(--color-text);">AI-Accelerated Development.</strong> I integrate Claude Code, Cursor, and GitHub Copilot into my workflow to move faster without sacrificing quality. These tools excel at repetitive tasks—component scaffolding, testing, documentation—freeing me to focus on architecture, accessibility, and problem-solving. I review, test, and approve all AI-assisted output before it reaches a client—the tools assist a human developer, they don't work autonomously. The result: shorter timelines, fewer bugs, cleaner code.
               </p>
             </section>
 
@@ -284,19 +238,19 @@
               <h2 id="expertise-heading" class="section__title">Core Expertise</h2>
               <div style="display: grid; gap: 1.5rem;">
                 <div>
-                  <h3 style="color: var(--color-magenta); font-size: var(--text-lg); margin-bottom: 0.75rem;">Shopify Theme Development & Optimization</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-lg); margin-bottom: 0.75rem;">Shopify Theme Development & Optimization</h3>
                   <p style="color: var(--color-text-muted);">
                     Shopify CLI • Liquid (theme code, snippets, sections, JSON) • Online Store 2.0 sections & blocks • Metafields & metaobjects • Custom theme architecture • Responsive design (mobile-first) • Core Web Vitals optimization • Image optimization & lazy loading • CSS (Flexbox, Grid) • Shopify Flow automation • Payment integrations • Store performance & conversion optimization • Theme version control & Git-based delivery
                   </p>
                 </div>
                 <div>
-                  <h3 style="color: var(--color-cyan); font-size: var(--text-lg); margin-bottom: 0.75rem;">AI-Accelerated Development & Front-End Architecture</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-lg); margin-bottom: 0.75rem;">AI-Accelerated Development & Front-End Architecture</h3>
                   <p style="color: var(--color-text-muted);">
-                    Claude Code • Cursor IDE • GitHub Copilot • Agentic AI workflows • HTML5 • JavaScript (Vanilla JS, modern ES6+) • Git/GitHub • GitHub Actions & automation • WCAG 2.1 AA accessibility • ADA compliance • Responsive design patterns • Component-driven development • Testing & QA • Technical documentation • Performance budgeting • Front-end performance strategies
+                    Claude Code • Cursor IDE • GitHub Copilot • AI-assisted workflows (human-supervised) • HTML5 • JavaScript (Vanilla JS, modern ES6+) • Git/GitHub • GitHub Actions & automation • WCAG 2.1 AA-aligned accessibility • Human-in-the-loop AI review • Responsive design patterns • Component-driven development • Testing & QA • Technical documentation • Performance budgeting • Front-end performance strategies
                   </p>
                 </div>
                 <div>
-                  <h3 style="color: var(--color-magenta); font-size: var(--text-lg); margin-bottom: 0.75rem;">Technical Leadership & Team Management</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-lg); margin-bottom: 0.75rem;">Technical Leadership & Team Management</h3>
                   <p style="color: var(--color-text-muted);">
                     Requirements gathering & stakeholder alignment • Agile/Scrum methodology • Team leadership & mentoring • Project coordination • Code review & quality assurance • Architectural decision-making • Risk assessment • User training & support • Technical documentation • Cross-functional collaboration • Contractor management • Operational efficiency
                   </p>
@@ -328,7 +282,7 @@
                 <div style="padding: 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-cyan); border-radius: var(--radius-md);">
                   <h3 style="color: var(--color-text); font-size: var(--text-base); font-weight: 600; margin: 0 0 0.5rem 0;">Accessibility Built-In</h3>
                   <p style="color: var(--color-text-muted); margin: 0; font-size: var(--text-sm);">
-                    WCAG 2.1 AA compliance from day one. Not a checkbox—it's core to how I code. Stores that work for everyone means better SEO, faster adoption, and reduced legal risk.
+                    Accessibility-conscious development aligned with WCAG 2.1 AA from day one. Not a checkbox—it's core to how I code. Stores that work for everyone mean better usability, broader reach, and a stronger foundation.
                   </p>
                 </div>
                 <div style="padding: 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-magenta); border-radius: var(--radius-md);">
@@ -351,25 +305,25 @@
               <h2 id="process-heading" class="section__title">How I Work</h2>
               <div style="display: grid; gap: 1.5rem;">
                 <div>
-                  <h3 style="color: var(--color-magenta); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">1. Discovery & Alignment</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">1. Discovery & Alignment</h3>
                   <p style="color: var(--color-text-muted); line-height: 1.6;">
                     I start by understanding your vision, constraints, and success metrics. Detailed requirements gathering prevents scope creep and ensures we're on the same page before a single line of code is written.
                   </p>
                 </div>
                 <div>
-                  <h3 style="color: var(--color-cyan); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">2. GitHub-Based Delivery</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">2. GitHub-Based Delivery</h3>
                   <p style="color: var(--color-text-muted); line-height: 1.6;">
                     Every change lives on GitHub with clear PR descriptions, preview branches, and release notes. You see exactly what's being shipped and can review before it goes live. Full transparency, zero surprises.
                   </p>
                 </div>
                 <div>
-                  <h3 style="color: var(--color-magenta); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">3. Continuous Communication</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">3. Continuous Communication</h3>
                   <p style="color: var(--color-text-muted); line-height: 1.6;">
                     Regular check-ins, status updates, and proactive feedback. If blockers arise, you're the first to know. I explain technical decisions in plain language so you understand the tradeoffs.
                   </p>
                 </div>
                 <div>
-                  <h3 style="color: var(--color-cyan); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">4. Launch & Beyond</h3>
+                  <h3 style="color: var(--color-text); font-size: var(--text-base); font-weight: 600; margin-bottom: 0.75rem;">4. Launch & Beyond</h3>
                   <p style="color: var(--color-text-muted); line-height: 1.6;">
                     Launch is the beginning, not the end. I provide performance monitoring, optimization recommendations, and ongoing support. Long-term success is the goal, not just shipping.
                   </p>
@@ -518,16 +472,10 @@
                 Proven track record of leading technical teams, mentoring junior developers, and delivering high-stakes projects under pressure. I combine hands-on coding expertise with strategic leadership—understanding both the technical depth required to execute and the business context that drives decisions.
               </p>
               <ul style="list-style: none; padding: 0; display: grid; gap: 0.75rem;" role="list" aria-label="Leadership achievements and recognition">
-                <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-magenta); border-radius: var(--radius-md); color: var(--color-text-muted);">
-                  <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                    <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-magenta); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
-                    <span><strong style="color: var(--color-text);">Managed 3 contractors</strong> on complex web modernization projects, establishing clear requirements, code standards, and delivery timelines.</span>
-                  </span>
-                </li>
                 <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-cyan); border-radius: var(--radius-md); color: var(--color-text-muted);">
                   <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
                     <span style="display: inline-block; width: 6px; height: 6px; background: var(--color-cyan); border-radius: 50%; flex-shrink: 0;" aria-hidden="true"></span>
-                    <span><strong style="color: var(--color-text);">Built accessibility from first principles</strong> across 5 development storefronts, achieving WCAG 2.1 AA compliance and demonstrating that accessibility + performance + conversion are not tradeoffs.</span>
+                    <span><strong style="color: var(--color-text);">Built accessibility from first principles</strong> across 5 development storefronts, applying WCAG 2.1 AA standards and demonstrating that accessibility + performance + conversion are not tradeoffs.</span>
                   </span>
                 </li>
                 <li style="padding: 0.875rem 1rem; background: var(--color-panel-glass); border: 1px solid var(--color-border); border-left: 3px solid var(--color-magenta); border-radius: var(--radius-md); color: var(--color-text-muted);">
@@ -586,6 +534,7 @@
             <ul role="list">
               <li><a href="terms.html">Terms of Use</a></li>
               <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="ai-policy.html">AI Use Policy</a></li>
             </ul>
           </nav>
         </div>

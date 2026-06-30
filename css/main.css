@@ -152,6 +152,15 @@ body {
   line-height: var(--leading-normal);
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+/* Prevent horizontal overflow on small screens: let grid/flex items
+   shrink below their content's min-content size instead of blowing out. */
+@media (max-width: 768px) {
+  * {
+    min-width: 0;
+  }
 }
 
 ::selection {
@@ -325,8 +334,9 @@ section {
 
 .nav__logo-icon {
   width: auto;
-  height: 60px;
+  height: 75px;
   flex-shrink: 0;
+  display: block;
 }
 
 .nav__logo-text {
@@ -345,7 +355,7 @@ section {
 
   .nav__desktop ul {
     display: flex;
-    gap: 0;
+    gap: 5px;
     list-style: none;
   }
 
@@ -435,8 +445,8 @@ section {
   }
 
   .nav__logo-icon {
-    width: 85%;
-    height: auto;
+    width: auto;
+    height: 38px;
   }
 
   .services__grid {
@@ -552,7 +562,7 @@ section {
   max-width: var(--max-w-prose);
   margin-bottom: 2rem;
   color: var(--color-text-muted);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   line-height: var(--leading-normal);
 }
 
@@ -621,7 +631,7 @@ main {
 .section__subtitle {
   max-width: var(--max-w-prose);
   color: var(--color-text-muted);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: var(--weight-normal);
 }
 
@@ -636,7 +646,7 @@ main {
 .process__grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   margin-bottom: 2rem;
 }
 
@@ -670,7 +680,7 @@ main {
 
 .process__description {
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   line-height: var(--leading-normal);
 }
 
@@ -682,7 +692,7 @@ main {
 
 .process__guarantee-text {
   color: var(--color-text);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   margin: 0;
   line-height: var(--leading-normal);
 }
@@ -691,7 +701,7 @@ main {
 .workflow__steps {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 
 .workflow__step {
@@ -707,15 +717,14 @@ main {
 
 .workflow__step p {
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
 }
 
 /* About Section */
 .about__bio {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   margin-bottom: 2rem;
-  max-width: var(--max-w-prose);
   line-height: var(--leading-normal);
 }
 
@@ -771,7 +780,7 @@ main {
 
 .card__body {
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-family: var(--font-body);
 }
 
@@ -779,7 +788,7 @@ main {
   list-style: disc;
   padding-left: 1.25rem;
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-family: var(--font-body);
 }
 
@@ -853,7 +862,7 @@ main {
 .card__description {
   flex-grow: 1;
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   margin-bottom: 1rem;
 }
 
@@ -963,9 +972,8 @@ main {
 }
 
 .page-intro {
-  max-width: var(--max-w-prose);
   color: var(--color-text-muted);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   line-height: var(--leading-normal);
   margin-bottom: 0;
 }
@@ -980,7 +988,7 @@ main {
 .portfolio-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
 }
 
 @media (max-width: 640px) {
@@ -1000,7 +1008,7 @@ main {
 
 .contact__coming-soon {
   color: var(--color-text-muted);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
 }
 
 /* ============================================================================

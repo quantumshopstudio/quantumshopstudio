@@ -25,7 +25,10 @@
   <header class="site-header" role="banner">
     <div class="container">
       <a class="nav__logo" href="index.html">
-        <img src="img/logo-primary.png" alt="Quantum Shop Studio - Shopify theme development" class="nav__logo-icon" />
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mark.svg" />
+          <img src="img/quantum-shop-studio-header-lockup.svg" alt="Quantum Shop Studio - Shopify theme development" class="nav__logo-icon" />
+        </picture>
       </a>
 
       <!-- Desktop Navigation -->
@@ -86,9 +89,9 @@
     <!-- Page Header -->
     <section class="section portfolio-intro" aria-labelledby="portfolio-heading">
       <div class="container">
-        <h1 id="portfolio-heading" class="page-title">Recent Work</h1>
+        <h1 id="portfolio-heading" class="page-title" style="font-size: clamp(1.3125rem, 1.05rem + 1.3125vw, 1.96875rem); text-transform: uppercase;">Recent Work</h1>
         <p class="page-intro">
-          Below are Shopify development stores I've built to demonstrate real capabilities: custom Online Store 2.0 theme work, clean Liquid features, AI-assisted builds and audits using Claude AI coding agents, and GitHub-connected workflows that make updates safe and repeatable. Each build reflects the partnership-first approach I bring to client work—transparency, continuous improvement, and a focus on sustainable growth.
+          Below are Shopify development stores I've built to demonstrate real capabilities: custom Online Store 2.0 theme work, clean Liquid features, AI-assisted builds and audits using Claude AI coding tools (every change human-reviewed and approved), and GitHub-connected workflows that make updates safe and repeatable. Each build reflects the partnership-first approach I bring to client work—transparency, continuous improvement, and a focus on sustainable growth.
         </p>
         <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
           <strong>Focus on US-based partnerships:</strong> I work exclusively with US-based Shopify store owners to ensure the deepest level of communication, trust, and partnership. This specialization allows me to provide the attentive support and reliability you need for sustained growth and long-term success.
@@ -206,7 +209,7 @@
             <div class="card__video-wrapper">
               <iframe
                 src="https://www.loom.com/embed/placeholder-bike-shack"
-                title="Bike Shack AI: Custom theme development with Claude Code and Agentic AI workflows — modern grid layout, product quizzes, availability status, and Flickity slider integration"
+                title="Bike Shack AI: Custom theme development with Claude Code and AI-assisted workflows — modern grid layout, product quizzes, availability status, and Flickity slider integration"
                 loading="lazy"
                 allow="fullscreen"
                 class="card__iframe"
@@ -220,13 +223,13 @@
                 Bike Shack AI
               </h3>
               <p class="card__description">
-                Complete store setup paired with extensive custom theme development using Claude Code and Agentic AI workflows. Built modern grid layouts for collections, integrated product quiz surveys for bike/helmet selection, added availability status indicators, created custom variant selector for water bottles, implemented Flickity slider on homepage, and developed custom blog review rating snippets with Liquid and JavaScript.
+                Complete store setup paired with extensive custom theme development using Claude Code and AI-assisted workflows. Built modern grid layouts for collections, integrated product quiz surveys for bike/helmet selection, added availability status indicators, created custom variant selector for water bottles, implemented Flickity slider on homepage, and developed custom blog review rating snippets with Liquid and JavaScript.
               </p>
               <ul class="card__tags" role="list" aria-label="Project tags">
                 <li class="tag">Custom Grid</li>
                 <li class="tag">Claude Code</li>
                 <li class="tag">Liquid + JS</li>
-                <li class="tag">Agentic AI</li>
+                <li class="tag">AI-Assisted</li>
               </ul>
               <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
                 <a href="https://github.com/free-the-net/bike-shack-ai" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" style="font-size: var(--text-sm);">View Repository</a>
@@ -293,7 +296,7 @@
             <figure class="card__media">
               <img
                 src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=450&fit=crop"
-                alt="Coffee shop storefront with focus on accessible design and WCAG 2.1 AA compliance features visible in navigation and product pages"
+                alt="Coffee shop storefront with focus on accessible design and WCAG 2.1 AA-aligned features visible in navigation and product pages"
                 loading="lazy"
                 class="card__img"
                 width="800"
@@ -307,7 +310,7 @@
             <div class="card__video-wrapper">
               <iframe
                 src="https://www.loom.com/embed/placeholder-sharp-bean"
-                title="The Sharp Bean: Accessibility-focused store setup with GitHub Claude AI workflows to improve WCAG 2.1 AA compliance and ADA accessibility scores — automated improvements and manual refinements"
+                title="The Sharp Bean: Accessibility-focused store setup with GitHub + Claude AI workflows to improve WCAG 2.1 AA-aligned accessibility — automated improvements and human-reviewed refinements"
                 loading="lazy"
                 allow="fullscreen"
                 class="card__iframe"
@@ -321,7 +324,7 @@
                 The Sharp Bean
               </h3>
               <p class="card__description">
-                Custom store setup with accessibility as a core priority. Currently implementing GitHub-integrated Claude AI workflows to improve WCAG 2.1 AA compliance and boost overall ADA accessibility score. This project demonstrates commitment to building inclusive digital experiences and leveraging AI for systematic accessibility improvements across theme files and Shopify backend configuration.
+                Custom store setup with accessibility as a core priority. Currently implementing GitHub-integrated, human-supervised Claude AI workflows to improve WCAG 2.1 AA-aligned accessibility. This project demonstrates a commitment to building inclusive digital experiences and using AI to assist systematic accessibility improvements—reviewed and approved by a developer—across theme files and Shopify backend configuration.
               </p>
               <ul class="card__tags" role="list" aria-label="Project tags">
                 <li class="tag">Accessibility First</li>
@@ -355,6 +358,7 @@
             <ul role="list">
               <li><a href="terms.html">Terms of Use</a></li>
               <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="ai-policy.html">AI Use Policy</a></li>
             </ul>
           </nav>
         </div>
