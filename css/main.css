@@ -935,6 +935,20 @@ main {
   border-color: var(--color-text);
 }
 
+/* Solid-cyan booking CTA */
+.btn--book {
+  border-color: var(--color-cyan);
+  background: var(--color-cyan);
+  color: var(--color-bg);
+  font-weight: var(--weight-semibold);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.btn--book:hover {
+  background: rgba(46, 235, 255, 0.85);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
 /* Filter Buttons */
 .filter-btn {
   min-height: var(--touch-min);
