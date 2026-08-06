@@ -945,7 +945,8 @@ main {
 }
 
 .btn--book:hover {
-  background: rgba(46, 235, 255, 0.85);
+  background: #25bccc;
+  color: var(--color-bg);
   box-shadow: var(--shadow-glow-cyan);
 }
 
