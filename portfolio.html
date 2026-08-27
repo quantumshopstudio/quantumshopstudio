@@ -11,10 +11,9 @@
   <title>Portfolio — Quantum Shop Studio LLC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
   <link rel="icon" type="image/svg+xml" href="img/logo-mark.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Quantum Shop Studio LLC" />
@@ -216,15 +215,10 @@
             </figure>
 
             <div class="card__video-wrapper">
-              <iframe
-                src="https://www.loom.com/embed/7721a1bc7511467d85f1dadb6e733d92"
-                title="Bike Shack AI demo: scroll-driven helmet video with timed tooltips and reduced-motion fallback, custom L-shaped CSS product grid with hover image reveal and native filtering — AI-assisted, human-reviewed build"
-                loading="lazy"
-                allow="fullscreen"
-                class="card__iframe"
-                width="640"
-                height="360"
-              ></iframe>
+              <button type="button" class="video-facade" data-embed="https://www.loom.com/embed/7721a1bc7511467d85f1dadb6e733d92" data-title="Bike Shack AI demo: scroll-driven helmet video with timed tooltips and reduced-motion fallback, custom L-shaped CSS product grid with hover image reveal and native filtering — AI-assisted, human-reviewed build" aria-label="Play video: Bike Shack AI demo walkthrough">
+                <img src="img/loom-poster-bikeshack.jpg" alt="" width="800" height="398" loading="lazy" />
+                <span class="video-facade__play" aria-hidden="true">&#9654;</span>
+              </button>
             </div>
 
             <div class="card__body">
@@ -269,15 +263,10 @@
             </figure>
 
             <div class="card__video-wrapper">
-              <iframe
-                src="https://www.loom.com/embed/254b8501d1684471afe369cff6b64d3e"
-                title="The Sharp Bean demo — custom Shopify product page with a brand-styled size and grind picker, inventory-aware bag logic, a free-shipping bar, and WCAG 2.1 AA-aligned accessibility, built on Dawn through an AI-assisted, human-reviewed workflow"
-                loading="lazy"
-                allow="fullscreen"
-                class="card__iframe"
-                width="640"
-                height="360"
-              ></iframe>
+              <button type="button" class="video-facade" data-embed="https://www.loom.com/embed/254b8501d1684471afe369cff6b64d3e" data-title="The Sharp Bean demo — custom Shopify product page with a brand-styled size and grind picker, inventory-aware bag logic, a free-shipping bar, and WCAG 2.1 AA-aligned accessibility, built on Dawn through an AI-assisted, human-reviewed workflow" aria-label="Play video: The Sharp Bean demo walkthrough">
+                <img src="img/loom-poster-sharpbean.jpg" alt="" width="800" height="398" loading="lazy" />
+                <span class="video-facade__play" aria-hidden="true">&#9654;</span>
+              </button>
             </div>
 
             <div class="card__body">
@@ -377,6 +366,7 @@
   </footer>
 
   <script src="js/nav.js" defer></script>
+  <script src="js/video-facade.js" defer></script>
   <script src="js/portfolio.js" defer></script>
 </body>
 </html>

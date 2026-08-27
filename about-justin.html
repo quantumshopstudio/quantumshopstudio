@@ -11,10 +11,9 @@
   <title>About Justin Scaman — Quantum Shop Studio LLC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
   <link rel="icon" type="image/svg+xml" href="img/logo-mark.svg" />
   <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Quantum Shop Studio LLC" />
@@ -191,15 +190,11 @@
             <!-- Loom Video -->
             <div>
               <p style="color: var(--color-cyan); font-size: var(--text-sm); font-weight: 600; margin: 0 0 0.75rem 0; text-transform: uppercase; letter-spacing: 0.05em;">Watch my 20-second intro</p>
-              <div style="aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);">
-                <iframe
-                  src="https://www.loom.com/embed/9394ae93bcd243b1865da10b4047e81a"
-                  title="Justin Scaman - Quantum Shop Studio intro - Shopify development specialist explaining how we partner for scalable, accessible storefronts"
-                  frameborder="0"
-                  allow="fullscreen"
-                  style="width: 100%; height: 100%; display: block;"
-                  loading="lazy"
-                ></iframe>
+              <div style="position: relative; aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);">
+                <button type="button" class="video-facade" data-embed="https://www.loom.com/embed/9394ae93bcd243b1865da10b4047e81a" data-title="Justin Scaman - Quantum Shop Studio intro - Shopify development specialist explaining how we partner for scalable, accessible storefronts" aria-label="Play video: Justin Scaman's 20-second intro">
+                  <img src="img/loom-poster-intro.jpg" alt="" width="640" height="480" loading="lazy" />
+                  <span class="video-facade__play" aria-hidden="true">&#9654;</span>
+                </button>
               </div>
               <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin: 0.75rem 0 0 0; text-align: center; font-weight: var(--weight-semibold);">Justin Scaman</p>
             </div>
@@ -559,5 +554,6 @@
   </footer>
 
   <script src="js/nav.js" defer></script>
+  <script src="js/video-facade.js" defer></script>
 </body>
 </html>

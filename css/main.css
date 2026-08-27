@@ -1012,6 +1012,52 @@ main {
   }
 }
 
+/* Click-to-load video facade */
+.video-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: var(--color-panel);
+  overflow: hidden;
+}
+
+.video-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-facade__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(7, 10, 18, 0.75);
+  border: 2px solid var(--color-cyan);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  pointer-events: none;
+  transition: background var(--dur-normal) var(--ease-out), transform var(--dur-normal) var(--ease-out);
+}
+
+.video-facade:hover .video-facade__play,
+.video-facade:focus-visible .video-facade__play {
+  background: var(--color-cyan);
+  color: var(--color-bg);
+}
+
 /* Keep all-caps monospace headings readable on small screens */
 @media (max-width: 480px) {
   h1,
